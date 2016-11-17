@@ -5,6 +5,7 @@ Starter pack includes:
 - angular2 setup with webpack2 
 - treeshaking + AOT compilation
 - optimized build with DLLs for polyfills and vendors
+- lite-server config + vscode launch configurations 
 
 DEV Environment setup
 ---------------------
