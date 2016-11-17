@@ -45,3 +45,13 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+
+#
+# Project specific ignores 
+#
+
+node_modules/
+.awcache/
+build/
+src/**/*.css
