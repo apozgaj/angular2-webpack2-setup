@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<testsuite name="Chrome 54.0.2840 (Windows 10 0.0.0)" package="connect-opencti-client" timestamp="2016-11-17T15:33:25" id="0" hostname="apozgaj-PC" tests="1" errors="0" failures="0" time="0.115">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36"/>
+  </properties>
+  <testcase name="App Component should contain app text" time="0.115" classname="connect-opencti-client.App Component"/>
+  <system-out>
+    <![CDATA[Chrome 54.0.2840 (Windows 10 0.0.0) LOG: 'function ngInit'
+,Chrome 54.0.2840 (Windows 10 0.0.0) LOG: 'function a'
+
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>
