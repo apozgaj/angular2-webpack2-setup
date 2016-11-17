@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch Chrome against localhost, with sourcemaps",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:8080/",
+            "sourceMaps": true,
+            "sourceMapPathOverrides": {
+                "webpack:///./src/*": "${workspaceRoot}/src/*",
+                "webpack:///./~/*": "${workspaceRoot}/node_modules/*"
+            },
+            "port": 9222,
+            "webRoot": "${workspaceRoot}/build/client",
+            "smartStep": true,
+            "diagnosticLogging": true,
+            "userDataDir": "${workspaceRoot}/.vscode/chrome",
+            "runtimeArgs": [
+                "--disable-session-crashed-bubble",
+                "--disable-infobars",
+                "--remote-debugging-port=9222"
+            ]
+        }
+    ]
+}

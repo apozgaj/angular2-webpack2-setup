@@ -1,0 +1,33 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "module": "es2015",
+        "moduleResolution": "node",
+        "noEmitHelpers": false,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "sourceMap": true,
+        "strictNullChecks": false,
+        "baseUrl": "./src",
+        "lib": [
+            "es6",
+            "dom"
+        ],
+        "paths": {
+            "aot/*": [
+                "../build/aot/src/*"
+            ]
+        }
+    },
+    "exclude": [
+        "node_modules"
+    ],
+    "compileOnSave": false,
+    "buildOnSave": false,
+    "awesomeTypescriptLoaderOptions": {
+        "useWebpackText": true,
+        "forkChecker": true,
+        "useCache": true,
+        "useBabel": true
+    }
+}

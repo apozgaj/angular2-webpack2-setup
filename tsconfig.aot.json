@@ -1,0 +1,28 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "module": "es2015",
+        "moduleResolution": "node",
+        "noEmitHelpers": false,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "noEmit": true,
+        "sourceMap": true,
+        "strictNullChecks": false,
+        "baseUrl": "./src",
+        "lib": [
+            "es6",
+            "dom"
+        ]
+    },
+    "exclude": [
+        "node_modules",
+        "build",
+        "src/main.browser.*",
+        "src/polyfills.*"
+    ],
+    "angularCompilerOptions": {
+        "genDir": "build/aot",
+        "skipMetadataEmit": true
+    }
+}
