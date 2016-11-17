@@ -14,6 +14,11 @@ DEV Environment setup
 2. npm run build:dll
 3. Run either: npm run compile:dev OR npm run watch:dev
 
+HTTP Server startup
+-------------------
+
+HTTP Server should be started in the Build/Client folder which will appear once the compilation is done.
+
 
 
 
