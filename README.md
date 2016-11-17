@@ -14,6 +14,12 @@ DEV Environment setup
 2. npm run build:dll
 3. Run either: npm run compile:dev OR npm run watch:dev
 
+PROD Environment setup
+---------------------
+
+1. npm run compile:prod
+2. Find the build in build/aot
+
 HTTP Server startup
 -------------------
 
