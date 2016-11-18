@@ -18,6 +18,9 @@ const NamedModulesPlugin = require('webpack/lib/NamedModulesPlugin');
  * See: http://webpack.github.io/docs/configuration.html#cli
  */
 module.exports = {
+
+    entry: {},
+
     /**
      * Source map for Karma from the help of karma-sourcemap-loader &  karma-webpack
      *
@@ -32,10 +35,7 @@ module.exports = {
      * See: http://webpack.github.io/docs/configuration.html#resolve
      */
     resolve: {
-        extensions: ['.ts', '.js', '.json', '.css', '.html'],
-        alias: {
-            'aot': path.join(__dirname, 'build/aot/src')
-        }
+        extensions: ['.ts', '.js'],
     },
 
 
@@ -98,13 +98,17 @@ module.exports = {
              * See: https://github.com/deepsweet/istanbul-instrumenter-loader
              */
             {
-                test: /\.(js)$/, loader: 'istanbul-instrumenter-loader',
+                test: /\.(js|ts)$/, loader: 'istanbul-instrumenter-loader',
                 enforce: 'post',
-                include: path.join(__dirname, './src'),
+                include: path.join(__dirname, 'src'),
                 exclude: [
+                    /\.(e2e|spec)\.ts$/,
                     /node_modules/
-                ]
-            },
+                ],
+                query: {
+                    esModules: true
+                }
+            }
         ]
     },
 
@@ -119,5 +123,14 @@ module.exports = {
             path.join(__dirname, './src')
         ),
         new NamedModulesPlugin()
-    ]
+    ],
+
+    node: {
+        global: true,
+        process: false,
+        crypto: false,
+        module: false,
+        clearImmediate: false,
+        setImmediate: false
+    }
 };

@@ -11,15 +11,26 @@ module.exports = function (config) {
             'jasmine'
         ],
 
+        exclude: [],
+
         files: [
             { pattern: 'src/main.test.js', watched: false }
         ],
 
         preprocessors: {
-            './src/main.test.js': ['coverage', 'webpack', 'sourcemap']
+            './src/main.test.js': ['webpack', 'sourcemap']
         },
 
         webpack: require('./webpack.test.js'),
+
+        junitReporter: {
+            outputDir: `reports/tests/testreport`,
+            outputFile: 'report.xml',
+            suite: 'connect-opencti-client',
+            useBrowserName: false
+        },
+
+        reporters: ['coverage', 'junit', 'nyan'],
 
         coverageReporter: {
             dir: 'reports/coverage/',
@@ -30,24 +41,15 @@ module.exports = function (config) {
                 { type: 'cobertura', subdir: '.', file: 'cobertura.xml' }
             ]
         },
-
-        junitReporter: {
-            outputDir: `reports/tests/testreport`,
-            outputFile: 'report.xml',
-            suite: 'connect-opencti-client',
-            useBrowserName: false
-        },
-
-        reporters: ENV === 'test:dev' ? ['junit', 'mocha', 'coverage'] : ['junit', 'mocha'],
-
         port: 9876,
         colors: true,
         logLevel: config.LOG_INFO,
-        autoWatch: true,
+        autoWatch: !runOnce,
 
         browsers: ['Chrome'],
 
-        singleRun: runOnce
+        singleRun: runOnce,
+
     };
 
     config.set(configuration);
