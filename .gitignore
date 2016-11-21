@@ -54,4 +54,5 @@ Temporary Items
 node_modules/
 .awcache/
 build/
+reports/
 src/**/*.css
