@@ -2,10 +2,11 @@ Starter pack for Angular2 with webpack2
 =======================================
 
 Starter pack includes:
-- angular2 setup with webpack2 
+
+- angular2 setup with webpack2
 - treeshaking + AOT compilation
 - optimized build with DLLs for polyfills and vendors
-- lite-server config + vscode launch configurations 
+- lite-server config + vscode launch configurations
 
 DEV Environment setup
 ---------------------
@@ -23,7 +24,8 @@ PROD Environment setup
 HTTP Server startup
 -------------------
 
-HTTP Server should be started in the Build/Client folder which will appear once the compilation is done.
+HTTP Server should be started in the build/client folder which will appear once the compilation is done
+(lite-server is already configured, so `npm install lite-server -g` and `lite-server`).
 
 
 

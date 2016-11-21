@@ -49,7 +49,8 @@ module.exports = function webpackConfig() {
         resolve: {
             extensions: ['.ts', '.js', '.json', '.css', '.html', 'xlf'],
             alias: {
-                'aot': path.join(__dirname, 'build/aot/src')
+                'aot': path.join(__dirname, 'build/aot/src'),
+                'components': path.join(__dirname, 'src/app')
             }
         },
 
