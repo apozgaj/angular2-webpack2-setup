@@ -56,3 +56,4 @@ node_modules/
 build/
 reports/
 src/**/*.css
+npm-debug*
