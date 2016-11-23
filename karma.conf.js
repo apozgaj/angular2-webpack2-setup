@@ -8,13 +8,18 @@ module.exports = function (config) {
         basePath: '',
 
         frameworks: [
-            'jasmine'
+            'jasmine',
+            'intl-shim'
         ],
 
         exclude: [],
 
         files: [
             { pattern: 'src/main.test.js', watched: false }
+        ],
+
+        plugins: [
+            require("karma-intl-shim")
         ],
 
         preprocessors: {
