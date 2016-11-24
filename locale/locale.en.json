@@ -1,0 +1,6 @@
+{
+    "TITLE": "Hello !",
+    "DATE_CAPTION": "Localized date",
+    "PI_CAPTION": "Localized number (PI)",
+    "CURRENCY_CAPTION": "Localized currency"
+}

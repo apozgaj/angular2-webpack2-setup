@@ -1,2 +1,8 @@
-<h1>Congratulations !</h1>
-<p>The app works.</p>
+<h1>{{ 'TITLE' | translate:lang }}</h1>
+
+<p>{{ 'DATE_CAPTION' | translate:lang }} : {{ today | localeDate:defaultLocale:'fullDate' }}</p>
+<p>{{ 'PI_CAPTION' | translate:lang }} : {{ pi | localeDecimal:defaultLocale:'1.5-5' }}</p>
+<p>{{ 'CURRENCY_CAPTION' | translate:lang }} : {{ value | localeCurrency:defaultLocale:currency:true:'1.2-2' }}</p>
+
+<a class="language-button" (click)="selectLocale('en', 'US', 'USD');">United States</a>
+<a class="language-button" (click)="selectLocale('hr', 'HR', 'HRK');">Croatia</a>
