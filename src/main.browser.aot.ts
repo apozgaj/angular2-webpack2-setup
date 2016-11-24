@@ -3,7 +3,8 @@ import { platformBrowser } from '@angular/platform-browser';
 import { AppModuleNgFactory } from 'aot/app/app.module.ngfactory';
 
 export function main() {
-  return platformBrowser().bootstrapModuleFactory(AppModuleNgFactory)
+  return platformBrowser()
+    .bootstrapModuleFactory(AppModuleNgFactory)
     .catch(err => console.log(err));
 }
 
