@@ -2,3 +2,4 @@ node_modules/
 .awcache/
 build/
 src/**/*.css
+npm-debug*

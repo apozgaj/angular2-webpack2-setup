@@ -9,7 +9,7 @@ const {
     NoErrorsPlugin,
     DefinePlugin
 } = require('webpack');
-
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const {
     ForkCheckerPlugin
@@ -49,7 +49,8 @@ module.exports = function webpackConfig() {
         resolve: {
             extensions: ['.ts', '.js', '.json', '.css', '.html', 'xlf'],
             alias: {
-                'aot': path.join(__dirname, 'build/aot/src')
+                'aot': path.join(__dirname, 'build/aot/src'),
+                'components': path.join(__dirname, 'src/app')
             }
         },
 
@@ -81,7 +82,7 @@ module.exports = function webpackConfig() {
             new HtmlWebpackPlugin({
                 template: 'src/index.html',
                 inject: true,
-                chunksSortMode: function(a, b) {
+                chunksSortMode: function (a, b) {
                     // polyfills always need to be loaded first 
                     if (a.names[0].indexOf('polyfills')) {
                         return 1;
@@ -91,7 +92,11 @@ module.exports = function webpackConfig() {
                     }
                     return 0;
                 }
-            })
+            }),
+            new CopyWebpackPlugin([{
+                context: 'locale',
+                from: '*.json'
+            }])
         ]
     };
 

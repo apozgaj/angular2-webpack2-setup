@@ -13,7 +13,12 @@
         "lib": [
             "es6",
             "dom"
-        ]
+        ],
+        "paths": {
+            "components/*": [
+                "./app*"
+            ]
+        }
     },
     "exclude": [
         "node_modules",
