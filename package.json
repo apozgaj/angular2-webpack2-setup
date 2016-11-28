@@ -10,7 +10,7 @@
     "tslint": "tslint",
     "lint": "npm run tslint \"src/app/**/*.ts\" ",
     "sass": "node-sass src -o src --output-style compressed -q",
-    "postsass": "npm run postcss -- -c postcssconfig.json",
+    "postsass": "npm run postcss -- -c postcss.config.json",
     "sass:watch": "node-sass -w src -o src --output-style compressed -q",
     "rimraf": "rimraf",
     "build:dll": "npm run clean:dll && npm run sass && webpack",
