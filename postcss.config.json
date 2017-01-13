@@ -1,0 +1,8 @@
+{
+    "use": ["autoprefixer", "postcss-flexbugs-fixes"],
+    "input": "src\/app\/**\/*.css",
+    "replace": "true",
+    "autoprefixer": {
+        "browsers": ["ie > 9", "last 2 versions"]
+    }
+}

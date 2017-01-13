@@ -21,3 +21,5 @@ import 'core-js/client/shim';
 import 'zone.js/dist/zone';
 import 'ts-helpers';
 import 'intl';
+import 'es6-shim';
+import 'web-animations-js';
