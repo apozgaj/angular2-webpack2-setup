@@ -11,10 +11,7 @@ const {
 } = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
-const {
-    ForkCheckerPlugin
-} = require('awesome-typescript-loader');
-// TODO: [ap] consider this plugin
+
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin')
 const NamedModulesPlugin = require('webpack/lib/NamedModulesPlugin');
@@ -77,7 +74,6 @@ module.exports = function webpackConfig() {
                 path.join(__dirname, './src')
             ),
             new ProgressPlugin(),
-            new ForkCheckerPlugin(),
             new NamedModulesPlugin(),
             new HtmlWebpackPlugin({
                 template: 'src/index.html',

@@ -29,8 +29,7 @@
     "buildOnSave": false,
     "awesomeTypescriptLoaderOptions": {
         "useWebpackText": true,
-        "forkChecker": true,
         "useCache": true,
-        "useBabel": true
+        "forkChecker": true
     }
 }
